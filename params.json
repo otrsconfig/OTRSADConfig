@@ -1,0 +1,6 @@
+{
+  "name": "OTRS Active Directory Configuration Generator",
+  "tagline": "Initial commit",
+  "body": "# OTRSADConfig\r\n\r\nOTRS is a flexible web-based ticketing system used for Customer Service & Help Desk. It's fast to implement and easy to customize.  \r\n\r\nThis application allows server administrators to generate the configuration needed for OTRS to authenticate its customers against a Microsoft Active Directory server, using a graphical interface.\r\nIncludes functions to retrieve the required information automatically, in order to simplify the process.\r\nIn addition, all required fields include helpful hints to guide in the configuration process.\r\n\r\n\r\n![](/1.jpg)\r\n\r\n![](/2.jpg)\r\n\r\n![](/3.jpg)\r\n\r\n![](/4.jpg)\r\n",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}
