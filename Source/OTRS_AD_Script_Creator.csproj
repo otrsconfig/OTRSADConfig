@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{820A1AEC-1C0C-4511-B1F4-8BE91245C64D}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <OutputType>WinExe</OutputType>
+    <AssemblyName>OTRS_AD_Script_Creator</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <WarningLevel>4</WarningLevel>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <Prefer32Bit>false</Prefer32Bit>
+    <DebugType>none</DebugType>
+    <DebugSymbols>false</DebugSymbols>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Drawing" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="OTRS_AD_Script_Creator.Properties\Resources.cs" />
+    <Compile Include="OTRS_AD_Script_Creator.Properties\Settings.cs" />
+    <Compile Include="OTRS_AD_Script_Creator\BaseDNSetter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OTRS_AD_Script_Creator\intro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OTRS_AD_Script_Creator\Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OTRS_AD_Script_Creator\Program.cs" />
+    <Compile Include="OTRS_AD_Script_Creator\SetDomain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="OTRS_AD_Script_Creator.Properties\Resources.resources" />
+    <EmbeddedResource Include="OTRS_AD_Script_Creator\BaseDNSetter.resources" />
+    <EmbeddedResource Include="OTRS_AD_Script_Creator\intro.resources" />
+    <EmbeddedResource Include="OTRS_AD_Script_Creator\Main.resources" />
+    <EmbeddedResource Include="OTRS_AD_Script_Creator\SetDomain.resources" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
